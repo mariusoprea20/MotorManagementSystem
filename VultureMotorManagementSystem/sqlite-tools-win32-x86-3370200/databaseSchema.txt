@@ -1,0 +1,87 @@
+CREATE TABLE technician(
+tech_id INTEGER,
+user_id INTEGER,
+tech_firstname TEXT,
+tech_lastname TEXT,
+tech_age INTEGER,
+tech_skills TEXT,
+health_status TEXT,
+PRIMARY KEY(tech_id),
+FOREIGN KEY(user_id)REFERENCES user(user_id)
+);
+
+CREATE TABLE motor(
+motor_id INTEGER,
+motor_name TEXT,
+motor_manufacturer TEXT,
+motor_client TEXT,
+motor_desc TEXT,
+motor_fault TEXT,
+job_arrivalDate TEXT,
+job_startDate TEXT,
+job_endDate TEXT NULL,
+job_deadline TEXT,
+job_status TEXT,
+job_delay TEXT NULL,
+replacement_parts TEXT NULL,
+notes TEXT NULL,
+PRIMARY KEY(motor_id)
+);
+
+CREATE TABLE task(
+task_id INTEGER,
+user_id INTEGER,
+motor_id INTEGER,
+tech_id INTEGER,
+task_type TEXT,
+task_desc TEXT,
+task_startDate TEXT,
+task_endDate TEXT NULL,
+task_status TEXT,
+task_deadline TEXT,
+task_expectedDays INTEGER,
+notes TEXT NULL,
+PRIMARY KEY(task_id),
+FOREIGN KEY(user_id)REFERENCES user(user_id),
+FOREIGN KEY(tech_id )REFERENCES technician(tech_id ),
+FOREIGN KEY(motor_id)REFERENCES motor(motor_id)
+ON DELETE CASCADE
+);
+
+CREATE TABLE inspection(
+inspection_id INTEGER,
+motor_id INTEGER,
+inspector_name TEXT,
+inspection_result TEXT,
+inspection_date TEXT,
+notes TEXT NULL,
+PRIMARY KEY(inspection_id),
+FOREIGN KEY(motor_id)REFERENCES motor(motor_id)
+ON DELETE CASCADE
+);
+
+CREATE TABLE user(
+user_id INTEGER,
+username TEXT,
+password TEXT,
+user_firstName TEXT,
+user_lastName TEXT,
+user_jobTitle TEXT,
+PRIMARY KEY(user_ID)
+);
+
+Create Table taskLog(
+log_id INTEGER,
+log_desc TEXT,
+log_dateTime TEXT,
+user_id INTEGER,
+task_id INTEGER,
+PRIMARY KEY(log_id),
+FOREIGN KEY(user_id)REFERENCES user(user_id)
+ON DELETE CASCADE,
+FOREIGN KEY(task_id)REFERENCES task(task_id)
+ON DELETE CASCADE
+);
+
+
+PRAGMA foreign_keys = ON;

@@ -1,0 +1,36 @@
+INSERT INTO technician (tech_id,  tech_firstname, tech_lastname, tech_age, tech_skills, health_status) VALUES
+(1234, 'Ola', 'Vardy', 27, 'fast,smart, etc', 'bad knee,cannot see properly'),
+(3214, 'Larry', 'Holmes', 45, 'is getting tired very easily', 'bad back'),
+(2214, 'Mike', 'Tyson', 33, 'work underpressure', 'healthy'),
+(6782, 'Elon', 'Musk', 42, 'fast hands', 'fingers missing'),
+(3311, 'Bobby', 'Lee', 30, 'good tester','healthy'),
+(4509, 'Joe', 'Rogan', 20, 'fast learner','healthy');
+
+INSERT INTO motor(motor_id, motor_desc, motor_fault, job_startDate,  job_duration, job_status) VALUES
+(2266, 'v12 with interconnected sockets', 'fuses are burned', '22/01/2022', '60 days', 'New'),
+(2255, 'motor for plowing', 'stuffy tubes', '02/02/2022', '30 days', 'In Progress'),
+(2244, 'motor for chainsaw', 'rusted', '10/06/2021', '40 days','Finished'),
+(2233, 'motor for helicopter', 'broken', '20/03/2022', '28 days', 'New'),
+(2299, 'motor coffemaker', 'bad wiring', '01/03/2022', '10 days', 'In Progress');
+
+INSERT INTO task (task_id, task_type, task_desc, task_status, task_deadline) VALUES
+(4077, 'cutting', 'cutting off the rusted parts' ,  'High Priority', '20/06/2022'),
+(4066, 'fitting', 'fitting new parts to the engine to make it fast' ,'High Priority', '12/06/2022'),
+(4411, 'wiring', 'couple the engine wires' , 'High Priority', '02/06/2022'),
+(4422, 'cleaning', 'cleaning the engine from the inside using a soft bursh' , 'New', '10/06/2022'),
+(4433, 'dismantling', 'dimsantling every single part of the engine for cleaning off its vaseline' , 'In Progress ' , '01/06/2022'),
+(4444, 'assembly', 'assembly the dismantled parts' , 'High Priority', '22/06/2022'),
+(4455, 'sorting', 'sorting the colord wires and tie them apart' ,'New', '20/06/2022'),
+(4466, 'wiring', 'wire the ends of the harddrive' , 'In Progress', '25/05/2022'),
+(4321, 'folding', 'dimsantling every single part of the engine for cleaning off its vaseline' , 'In Progress ' , '27/07/2022'),
+(4632, 'ressembly', 'assembly the dismantled parts' , 'Low Priority', '20/08/2022'),
+(4554, 'cooling', 'sorting the colord wires and tie them apart' , 'In Progress', '12/07/2022'),
+(4901, 'drawing', 'wire the ends of the harddrive' , 'New', '01/08/2022');
+
+INSERT INTO inspection(inspection_id, inspection_result, inspection_date) VALUES
+(1122, 'good quality in the end ' , '01/04/2022'),
+(1133, 'the valves will need a lot more cleaning' , '29/03/2022'),
+(1144, 'the light on the coffe maker does not light up. The wires are might not be connected properly' , '28/03/2022');
+
+INSERT INTO user (user_id, username, password, user_firstName, user_lastName, user_jobTitle) VALUES 
+(8821, 'hr', 'hr', 'hr', 'hr', 'HR');
