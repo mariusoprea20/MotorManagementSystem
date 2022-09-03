@@ -1,0 +1,21 @@
+Important
+
+There are 3 user accounts with different access to the relevant jobs:
+Customer Support 
+username:cs 
+password:cs
+
+Human Resources
+username:hr
+password:hr
+
+Technician
+username:tech
+password:tech
+
+After downloading the repo, make sure the "database path" in Task8.LogInLauncher class is the one corresponding to the path on your machine. 
+Make sure that all the drivers(JDBC, JCalendar, JFreeChart...etc) found in the project document, are present in the project library for the system to work.
+If you're unable to log in with the user details described above, you can access the sqlite directory inside the project folder and import data as per database schema.
+
+Thanks!
+
